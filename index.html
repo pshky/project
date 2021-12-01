@@ -32,9 +32,56 @@
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
-                </ul>            
+                </ul> 
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> LOGIN
+                    </a>
+                </span>           
         </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                    &times;
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row align-items-center">
+                          <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInput">Name</label>
+                            <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Your Name">
+                          </div>
+                          <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInputGroup">Email</label>
+                            <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                
+                              </div>
+                              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="form-check mb-2">
+                              <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                              <label class="form-check-label" for="autoSizingCheck">
+                                Remember me
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="jumbotron">
         <div class="container">
             <div class="col-12 col-sm align-self-center">
@@ -47,7 +94,8 @@
                 </div>
                 
                 <div class="col-15 col-sm-20">
-                    <a class="btn btn-warning btn-lg float-right" href="#form" role="button">Reserve Table</a>
+                    <a class="btn btn-warning btn-lg float-right"
+                    data-toggle="tooltip" data-html="true" title="Or call us at <br> <strong> 321321312 </strong> </br>" data-placement="bottom" href="#form" role="button">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -213,6 +261,11 @@
  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+ <script>
+     $(document).ready(function() {
+         $('[data-toggle="tooltip"]').tooltip();
+     });
+ </script>
 </body>
 
 </html>
